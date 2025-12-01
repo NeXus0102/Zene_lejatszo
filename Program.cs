@@ -101,7 +101,21 @@ namespace Zene_lejatszo
                         foreach (var z in zenek)
                             Console.WriteLine($"{sorszam++}. {z}");
                         break;
-            
+
+                    // 2 – Keresés cím szerint
+                    case "2":
+                        Console.Clear();
+                        Console.Write("Add meg a keresett cím részletét: ");
+                        string keres = (Console.ReadLine() ?? "").ToLower();
+
+                        sorszam = 0;
+                        foreach (var z in zenek)
+                        {
+                            if (z.Cim.ToLower().Contains(keres))
+                                Console.WriteLine($"{sorszam++}. {z}");
+                        }
+                        break;
+
         }
     }
 }
