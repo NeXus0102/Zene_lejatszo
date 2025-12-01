@@ -116,6 +116,17 @@ namespace Zene_lejatszo
                         }
                         break;
 
-        }
+                    // 3 – Pop zenék
+                    case "3":
+                        Console.Clear();
+                        sorszam = 0;
+                        foreach (var z in zenek)
+                        {
+                            if (z.Mufaj.ToLower() == "pop")
+                                Console.WriteLine($"{sorszam++}. {z}");
+                        }
+                        break;
+
+                }
     }
 }
